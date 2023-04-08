@@ -56,10 +56,22 @@ a {
   text-align: center;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
 .btn-primary:hover {
   background-color: #c77e36;
 }
 .btn-primary:active {
   background-color: #f3912e;
+}
+
+.hover-link {
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+.hover-link:hover {
+  transform: scale(1);
+}
+.hover-link:active {
+  transform: scale(0.9);
 }

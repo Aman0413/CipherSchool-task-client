@@ -10,9 +10,114 @@
       rgba(255, 0, 0, 0),
       rgba(255, 255, 255, 01)
     );
+    position: relative;
+
     .header-container {
       height: 100%;
       color: black;
+
+      .update-profile {
+        width: 50%;
+        height: 300px;
+        background-color: white;
+        position: absolute;
+        border-radius: 10px;
+        left: 25%;
+        top: 150px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .update-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+
+            h3 {
+              font-weight: 700;
+              font-size: 1.2rem;
+            }
+          }
+          .update-info {
+            display: flex;
+            .update-right {
+              width: 35%;
+              height: 200px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .update-img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: relative;
+
+                .edit {
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 50%;
+                  background-color: #f2f5fa;
+                  position: absolute;
+                  left: 37px;
+                  top: 82px;
+
+                  .custom-file-upload {
+                    border: 1px solid #ccc;
+                    display: inline-block;
+                    padding: 6px 12px;
+                    cursor: pointer;
+                    background-color: red;
+                  }
+                  input[type="file"] {
+                    display: none;
+                  }
+                }
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 50%;
+                }
+              }
+            }
+            .update-left {
+              width: 100%;
+              form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .btn-box {
+                  width: 100%;
+                  display: flex;
+                  justify-content: end;
+                  gap: 22px;
+
+                  .btn-cancel {
+                    background-color: black;
+                  }
+                }
+
+                input {
+                  border-radius: 10px;
+                  padding-block: 10px;
+                  padding-inline: 20px;
+                  background-color: #f2f5fa;
+                  border: none;
+                  font-size: 1.1rem;
+
+                  &:focus {
+                    outline: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
       .header-info-container {
         height: 100%;
         display: flex;
@@ -20,6 +125,8 @@
         justify-content: space-between;
 
         .right-part {
+          text-align: center;
+          cursor: pointer;
           h4 {
             font-weight: 500;
             font-size: 1.2rem;
@@ -29,11 +136,40 @@
           display: flex;
           column-gap: 30px;
 
+          .info-container {
+            .name-box {
+              display: flex;
+              gap: 5px;
+            }
+          }
+
           .image-container {
             width: 80px;
             height: 80px;
             border-radius: 50%;
             border: 0.2px solid rgb(69, 69, 69);
+            position: relative;
+
+            .edit {
+              width: 23px;
+              height: 23px;
+              background-color: #f2f5fa;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              left: 26px;
+              top: 63px;
+              transition: ease-in-out 0.2s;
+
+              &:hover {
+                transform: scale(1);
+              }
+              &:active {
+                transform: scale(0.9);
+              }
+            }
 
             img {
               width: 100%;
@@ -59,15 +195,11 @@
 
 @media screen and (max-width: 768px) {
   .Header {
-    .header-container {
-      .header-info-container {
-        // flex-direction: column;
-        // padding-block: 10px;
-        // gap: 10px;
-        .left-part {
-        }
-        .right-part {
-          display: none;
+    .background-container {
+      .header-container {
+        .update-profile {
+          width: 100%;
+          left: 0;
         }
       }
     }

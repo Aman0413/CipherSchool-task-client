@@ -13,6 +13,7 @@
       gap: 5px;
       padding-inline: 5px;
       padding-block: 10px;
+      cursor: pointer;
 
       .company-logo {
         width: 40px;
@@ -23,19 +24,15 @@
         }
       }
     }
-    .search-box {
-      display: flex;
-      align-items: center;
-      width: 300px;
-      padding-inline: 10px;
+    .logout {
+      font-size: 0.9rem;
+      padding: 0px;
+      padding-inline: 5px;
       padding-block: 5px;
-      border-radius: 50px;
-      background-color: #f2f5fa;
-
+      margin-right: 10px;
       .logo {
         color: black;
         background-color: #f2f5fa;
-        font-size: 1.2rem;
       }
 
       input {
@@ -58,9 +55,9 @@
   .Navbar {
     .nav-container {
       padding-right: 5px;
-      .search-box {
-        width: 180px;
-        padding-block: 3px;
+      .logout {
+        padding-inline: 8px;
+        font-size: 0.8rem;
       }
     }
   }

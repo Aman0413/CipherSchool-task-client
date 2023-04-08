@@ -1,5 +1,11 @@
 .Interest {
   .container {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
     .interest-header {
       display: flex;
       justify-content: space-between;
@@ -9,6 +15,53 @@
         font-size: 1.2rem;
       }
     }
-    padding-bottom: 70px;
+    margin-bottom: 20px;
+    .interest-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+      height: 100%;
+    }
+    .box {
+      height: 45px;
+      background-color: #ebe3dc;
+      color: #f3912e;
+      width: 170px;
+      font-weight: bold;
+      padding-inline: 10px;
+      padding-block: 4px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .interest-popup {
+      width: 500px;
+      height: 300px;
+      position: absolute;
+      bottom: 100px;
+      left: 30%;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding-block: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .inner-container {
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .btn-box {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        justify-content: end;
+        padding-inline: 20px;
+      }
+    }
   }
 }

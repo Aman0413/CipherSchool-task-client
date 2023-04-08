@@ -1,0 +1,67 @@
+.Login {
+  height: 100vh;
+  background-color: #f2f5fa;
+
+  .container {
+    background-color: white;
+    border-radius: 20px;
+    width: 40%;
+    height: 50%;
+    padding-block: 10px;
+    .login-box {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        padding-top: 20px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #f3912e;
+      }
+      form {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        .account {
+          font-size: 0.8rem;
+          font-weight: 100;
+        }
+      }
+      input {
+        width: 100%;
+        height: 20px;
+        padding-inline: 20px;
+        padding-block: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: #f2f5fa;
+
+        &:focus {
+          outline-color: #f3912e;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .Login {
+    .container {
+      width: 100%;
+      height: 100%;
+
+      form {
+        gap: 20px;
+        h3 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
