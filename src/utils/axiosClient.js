@@ -6,4 +6,5 @@ if (process.env.NODE === "production") {
 }
 export const axiosClient = axios.create({
   baseURL: baseURL,
+  withCredentials: true,
 });

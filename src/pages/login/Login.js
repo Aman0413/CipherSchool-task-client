@@ -27,8 +27,6 @@ function Login() {
           withCredentials: true,
         }
       );
-
-      localStorage.setItem("token", JSON.stringify(res.data.result));
       if (res.data.status === "ok") {
         navigate("/");
       } else {
