@@ -7,17 +7,13 @@ import Information from "../../components/information/Information";
 import ProfessionalInfo from "../../components/professionalInfo/ProfessionalInfo";
 import PasswordChange from "../../components/passwordchange/PasswordChange";
 import Interest from "../../components/interest/Interest";
-
-import { useCookies } from "react-cookie";
-import { axiosClient } from "../../utils/axiosClient";
 import { useDispatch } from "react-redux";
 import { getMyInfo } from "../../redux/slices/userSlice";
+import ChiperMap from "../../components/ciphermap/ChiperMap";
 
 function Home() {
   const dispatch = useDispatch();
 
-
-  
   useEffect(() => {
     dispatch(getMyInfo());
   });
@@ -27,6 +23,7 @@ function Home() {
       <Navbar />
       <Header />
       <AboutMe />
+      <ChiperMap />
       <Information />
       <ProfessionalInfo />
       <PasswordChange />

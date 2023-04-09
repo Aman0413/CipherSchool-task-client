@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./AboutMe.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import toast, { Toaster } from "react-hot-toast";
 import { axiosClient } from "../../utils/axiosClient";
 
